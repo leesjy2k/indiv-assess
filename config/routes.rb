@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   root "items#index"
+
+  resources :users, only: [:create, :show, :edit, :update, :destroy]
+ 
+  get "/auth/:provider/callback" => "sessions#create_from_omniauth"
+  get "/auth/facebook", as: "facebook_sign_in"
+  
   get  "/items"                             =>  "items#index"
   get  "/items/new"                         =>  "items#new"
   post "/items"                             =>  "items#create"
