@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Newbay</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" %>
+  </head>
+  <body>
+
+    <%= flash[:not_found] %>
+    <% if current_user %>
+      <%= render "layouts/logged_in_user" %>
+    <% else %>
+      <%= render "layouts/anonymous_user" %>
+    <% end %>
+
+    <%= yield %>
+
+    <div class="footer navbar-fixed-bottom">
+      <div class="container text-center">
+        <p id="footer-text-container"> 8th Light Apprentice Project 2016</p>
+      </div>
+    </div>
+  </body>
+</html>

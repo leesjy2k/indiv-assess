@@ -1,0 +1,34 @@
+<div class="container text-center page-title">
+  <h2> Add Item </h2>
+</div>
+
+<div class="container  text-center new-item-form">
+  <%= form_for @presenter.item, url: {action: "create"} do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, size: 60 %>
+    <%= f.label :description %>
+    <%= f.text_area :description, :cols => 60, :rows => 5 %>
+    <%= f.label :tags %>
+    <input type="text" name="tags" size="60">
+    <%= f.label :buy_it_now_price %>
+    <%= f.text_field :buy_it_now_price, size: 60 %>
+    <%= f.label :starting_bid_price %>
+    <%= f.text_field :starting_bid_price, size: 60 %>
+    <%= f.label :auction_end_time %>
+    <%= f.datetime_select :auction_end_time, size: 60 %>
+    <div class="file-field-wrapper">
+      <%= f.label :image %>
+      <%= f.file_field :image %>
+      <%= f.hidden_field :image_cache %>
+    </div>
+    <%= f.submit "Create", class: "btn-buy-now" %>
+  <% end %>
+
+  <% if @presenter.errors %>
+    <ul>
+      <% @presenter.errors.each do |error| %>
+        <li> <%= error %> </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
