@@ -1,48 +1,26 @@
-# Ebay Clone Rails App
-Ebay clone that offers a marketplace for buying and selling items.
 
-## Requirement
-- ruby ~> 2.2.1
-- bundler >= 1.3.0, < 2.0
-- postgresql
-- redis
+README
 
-## Installation
-Clone the repository and run:
+This README would normally document whatever steps are necessary to get the application up and running.
 
-```
-bundle install
-rake db:create
-rake db:migrate
-rake db:seed
-```
-start redis server
-```
-redis-server
-```
-start sidekiq
-```
-bundle exec sidekiq
-```
-## Usage
+Things you may want to cover:
 
-Start server:
+    Ruby version
 
-```
-rails s
-```
+    System dependencies
 
-View project at 'http://localhost:3000'
+    Configuration
 
-## Tests
-From the root directory run:
+    Database creation
 
-```
-rspec
-```
+    Database initialization
 
-To see tests detail, run:
- ```
-rspec spec --format documentation
-```
+    How to run the test suite
 
+    Services (job queues, cache servers, search engines, etc.)
+
+    Deployment instructions
+
+    …
+
+Please feel free to use a different markup language if you do not plan to run rake doc:app.

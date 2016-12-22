@@ -14,6 +14,10 @@ gem 'sidekiq', '~> 4.1.2'
 gem 'faker', '~> 1.6.3'
 gem 'redis', '~> 3.3.0'
 gem 'bcrypt', '~> 3.1.11'
+gem 'figaro'
+gem 'omniauth'
+gem 'omniauth-facebook'
+
 
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
