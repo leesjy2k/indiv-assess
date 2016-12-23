@@ -1,4 +1,7 @@
 class Item < ActiveRecord::Base
+
+  include PgSearch
+
   validates :name, :description, :seller_id, presence: true
   validate :price, :auction_details, :auction_duration
 

@@ -18,6 +18,7 @@ gem 'figaro'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'bootstrap-sass'
+gem 'pg_search'
 
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
