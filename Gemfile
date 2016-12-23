@@ -19,6 +19,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'bootstrap-sass'
 gem 'pg_search'
+gem 'will_paginate'
 
 group :production do
   gem 'rails_12factor', '~> 0.0.3'

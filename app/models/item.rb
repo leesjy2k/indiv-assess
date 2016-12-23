@@ -14,6 +14,8 @@ class Item < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
+  pg_search_scope :search_by_full_name, :against => [:name]
+
   def highest_bid
     bids.maximum(:amount) || starting_bid_price
   end

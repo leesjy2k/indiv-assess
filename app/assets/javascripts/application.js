@@ -17,4 +17,38 @@
 //= require turbolinks
 //= require_tree .
 
+// $(document).ready(function(){
 
+//   $("#search_title").submit(function(event){
+
+//   // Search For events Using Full Text Search
+//   $eventSearch.on('submit', function(e){
+//     e.preventDefault();
+//     sendAjaxRequest("/name_search", $(this).serialize(), "search_name");
+//   });
+
+//   function sendAjaxRequest(url, data, action){
+//     if (action == SCHOOL_TYPE) {
+//       $schoolResult.empty();
+//     }else{
+//       $eventResult.empty();
+//     }
+//     $resultCover.removeClass('hide');
+
+//     $.ajax({
+//       url: url,
+//       type: 'GET',
+//       dataType: 'html',
+//       cache: false,
+//       data: data,
+//       success: function(data){
+//         updateView(data, action);
+//       },
+//       error: function(err){
+//         console.log("Error");
+//         console.log(err);
+//       }
+//     });
+//   } //AjaxFunction
+
+// });
