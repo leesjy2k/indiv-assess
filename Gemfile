@@ -35,7 +35,14 @@ group :development, :test do
   gem 'rspec-core', '~> 3.4.4'
   # gem 'faker', '~> 1.6.3'
   gem 'pry', '~> 0.10.3'
-  gem "teaspoon-jasmine", '~> 2.3.4'
+  # gem "teaspoon-jasmine", '~> 2.3.4'
+  gem 'guard-rspec'
+  gem 'annotate'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem "rspec-given"
+  gem 'rb-fsevent'
 end
 
 group :development do
