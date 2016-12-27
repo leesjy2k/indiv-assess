@@ -341,3 +341,392 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-27 11:50:35 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (238.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ItemsController#index as HTML
+  [1m[35mTag Load (90.4ms)[0m  SELECT  "tags".* FROM "tags" LIMIT 100
+  [1m[36mItem Load (55.3ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."available" = $1 LIMIT 100[0m  [["available", "t"]]
+  Rendered items/index.html.erb within layouts/application (484.1ms)
+  Rendered layouts/_anonymous_user.html.erb (1.6ms)
+Completed 200 OK in 87848ms (Views: 86694.7ms | ActiveRecord: 461.5ms)
+
+
+Started GET "/assets/items.self-4d03af92ca908a0db971cff68b9ec65587bb4b6692b84b3352bae13dfa7e9444.css?body=1" for 127.0.0.1 at 2016-12-27 11:52:11 +0800
+
+
+Started GET "/assets/purchases.self-967d9d09d7878f80025de1b2b7077698e580ca5ff5746e6be4db3ed219f88724.css?body=1" for 127.0.0.1 at 2016-12-27 11:52:11 +0800
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-12-27 11:52:11 +0800
+
+
+Started GET "/assets/application.self-c3eddb41429fc30dd182a65ac3b77f7ff62ee52d92f0d6a298f62e80689a6d80.css?body=1" for 127.0.0.1 at 2016-12-27 11:52:11 +0800
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-12-27 11:52:12 +0800
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-12-27 11:52:12 +0800
+
+
+Started GET "/assets/countdown.self-4514ebdeaa30ac8cb7358501abc8e7be61a0c66a5136801a185e4ba5d206d068.js?body=1" for 127.0.0.1 at 2016-12-27 11:52:12 +0800
+
+
+Started GET "/assets/application.self-6f67ecab06da9ca4a72479618db8e412e0dfab1583de2a8b43112aa1aff79484.js?body=1" for 127.0.0.1 at 2016-12-27 11:52:12 +0800
+
+
+Started GET "/login" for 127.0.0.1 at 2016-12-27 11:59:40 +0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2417.3ms)
+  Rendered layouts/_anonymous_user.html.erb (1.5ms)
+Completed 200 OK in 2832ms (Views: 2827.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/default-favicon.ico" for 127.0.0.1 at 2016-12-27 11:59:44 +0800
+
+ActionController::RoutingError (No route matches [GET] "/images/default-favicon.ico"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /home/nextacademy/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/nextacademy/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/nextacademy/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (15.9ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (209.1ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.9ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (540.3ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (232.0ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (12.7ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (459.2ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2016-12-27 11:59:54 +0800
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2016-12-27 11:59:55 +0800
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQDuxYaOlrUC2qfTvgrxUJfCD_NZN6Io0Va3AnFLyCrJvr4LPkZlUOfe9Fn0p-v2pnpDKTdyq3VeAJkMbvqkexxXw5i7IFldhn1amwNthtcNjzcVCHk-IZCUix3LKd-FK80aFTWbHZeahmLlc10Nn8k9I1Y9e5qj9tJrDyP4FG3s41zSsQMm8GBt-Yvzp_2sb0yj6g-6Sc4GqIwGw6il9BGUf-_xYcfIx5YD6d59VhVWM7r2PEg1nuJJIqTs9d7pC4USFJiCQwfluJT4yim6jGTPsFyqRVkFIrVcKgw7WErJPAxTD9Vw8mnYapl8cofydmU&state=71ddaf1e36896091661f089006584468b357d0f79312abad" for 127.0.0.1 at 2016-12-27 11:59:57 +0800
+(facebook) Callback phase initiated.
+
+AbstractController::ActionNotFound (The action 'create_from_omniauth' could not be found for SessionsController):
+  actionpack (4.2.5) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:408:in `call_app!'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:362:in `callback_phase'
+  omniauth-oauth2 (1.4.0) lib/omniauth/strategies/oauth2.rb:75:in `callback_phase'
+  omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:67:in `block in callback_phase'
+  omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:131:in `with_authorization_code!'
+  omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.3.1) lib/omniauth/builder.rb:63:in `call'
+  rack (1.6.5) lib/rack/etag.rb:24:in `call'
+  rack (1.6.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.5) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /home/nextacademy/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/nextacademy/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/nextacademy/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (5.3ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (107.9ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (4.9ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (312.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-12-27 12:00:03 +0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_anonymous_user.html.erb (0.6ms)
+Completed 200 OK in 722ms (Views: 720.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-12-27 13:00:49 +0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_anonymous_user.html.erb (3.9ms)
+Completed 200 OK in 519ms (Views: 517.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/items.self-4d03af92ca908a0db971cff68b9ec65587bb4b6692b84b3352bae13dfa7e9444.css?body=1" for 127.0.0.1 at 2016-12-27 13:00:50 +0800
+
+
+Started GET "/assets/purchases.self-967d9d09d7878f80025de1b2b7077698e580ca5ff5746e6be4db3ed219f88724.css?body=1" for 127.0.0.1 at 2016-12-27 13:00:50 +0800
+
+
+Started GET "/assets/application.self-c3eddb41429fc30dd182a65ac3b77f7ff62ee52d92f0d6a298f62e80689a6d80.css?body=1" for 127.0.0.1 at 2016-12-27 13:00:50 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2016-12-27 13:00:51 +0800
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-12-27 13:00:51 +0800
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-12-27 13:00:51 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2016-12-27 13:00:51 +0800
+
+
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2016-12-27 13:00:51 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2016-12-27 13:00:51 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2016-12-27 13:00:52 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2016-12-27 13:00:52 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2016-12-27 13:00:52 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2016-12-27 13:00:52 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2016-12-27 13:00:52 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2016-12-27 13:00:52 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2016-12-27 13:00:52 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2016-12-27 13:00:52 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-12-27 13:00:52 +0800
+
+
+Started GET "/assets/bootstrap.self-b38817c3e3a3049abb1fc08dd6ae448b23330f8453226efdb074710209474f75.js?body=1" for 127.0.0.1 at 2016-12-27 13:00:52 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-12-27 13:00:52 +0800
+
+
+Started GET "/assets/countdown.self-4514ebdeaa30ac8cb7358501abc8e7be61a0c66a5136801a185e4ba5d206d068.js?body=1" for 127.0.0.1 at 2016-12-27 13:00:52 +0800
+
+
+Started GET "/assets/application.self-6f67ecab06da9ca4a72479618db8e412e0dfab1583de2a8b43112aa1aff79484.js?body=1" for 127.0.0.1 at 2016-12-27 13:00:52 +0800
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2016-12-27 13:02:11 +0800
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2016-12-27 13:02:12 +0800
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQA0kUGggKBRYDm6HXQktZwGg7kE2vxLIBCbTNviRmIBagOyI-LrMUKXndvVvVDd-cfudFmJDIePYQcIP_c6AnqeMZpOU_Y5QHlldaQHf08-PNtoTK6DZ5IPTpToDdijywWKor6OIW9nEB556us_wj0yyqox3tnLxvX0pNX4wvYxVApwkUh9FralLndPvZOnRISXgkG80i3khEvjicRI0RLjhGVXBkhXkKu4FuV6zqp1oH0GN8e8y_cwElkhG0jJ0JvgG4gDkdEe2x1Gd6joTNVQYg0ftWkQMJQSQPFlPziYxqCnlO8R49OnkyNSvHDyg5s&state=ccb565ca9257323b6ad1b06adb1b8a12f07785dbc7c093de" for 127.0.0.1 at 2016-12-27 13:02:14 +0800
+(facebook) Callback phase initiated.
+Processing by SessionsController#create_from_omniauth as HTML
+  Parameters: {"code"=>"AQA0kUGggKBRYDm6HXQktZwGg7kE2vxLIBCbTNviRmIBagOyI-LrMUKXndvVvVDd-cfudFmJDIePYQcIP_c6AnqeMZpOU_Y5QHlldaQHf08-PNtoTK6DZ5IPTpToDdijywWKor6OIW9nEB556us_wj0yyqox3tnLxvX0pNX4wvYxVApwkUh9FralLndPvZOnRISXgkG80i3khEvjicRI0RLjhGVXBkhXkKu4FuV6zqp1oH0GN8e8y_cwElkhG0jJ0JvgG4gDkdEe2x1Gd6joTNVQYg0ftWkQMJQSQPFlPziYxqCnlO8R49OnkyNSvHDyg5s", "state"=>"ccb565ca9257323b6ad1b06adb1b8a12f07785dbc7c093de", "provider"=>"facebook"}
+  [1m[35mAuthentication Load (56.3ms)[0m  SELECT  "authentications".* FROM "authentications" WHERE "authentications"."provider" = $1 AND "authentications"."uid" = $2 LIMIT 1  [["provider", "facebook"], ["uid", "10154685891200350"]]
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (89.6ms)[0m  INSERT INTO "authentications" ("provider", "uid", "token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["provider", "facebook"], ["uid", "10154685891200350"], ["token", "EAAXJ2w8HD6gBANgmFjAvehoPKfvyLwqkaVOjzqVwhZCloWZAJqlMQSZBOyEUd0M5OfYeO8tf5ZCsCRuxFupdvRpBHkn5w2w7P6ZANd3nVY8b0N7L0tZB2v04Y2JwwlkxiM09fCJhhQs63tZCruipOpH3feBI3ZAPqB4ZD"], ["created_at", "2016-12-27 05:02:19.056869"], ["updated_at", "2016-12-27 05:02:19.056869"]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 1872ms (ActiveRecord: 435.3ms)
+
+NoMethodError (undefined method `name=' for #<User:0x000000038fc750>):
+  app/models/user.rb:30:in `block in create_with_auth_and_hash'
+  app/models/user.rb:28:in `create_with_auth_and_hash'
+  app/controllers/sessions_controller.rb:22:in `create_from_omniauth'
+
+
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (116.2ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (30.4ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.4ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (436.5ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (6.1ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (139.9ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (6.7ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.1ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (278.4ms)
+
+
+Started GET "/auth/facebook/callback?code=AQA0kUGggKBRYDm6HXQktZwGg7kE2vxLIBCbTNviRmIBagOyI-LrMUKXndvVvVDd-cfudFmJDIePYQcIP_c6AnqeMZpOU_Y5QHlldaQHf08-PNtoTK6DZ5IPTpToDdijywWKor6OIW9nEB556us_wj0yyqox3tnLxvX0pNX4wvYxVApwkUh9FralLndPvZOnRISXgkG80i3khEvjicRI0RLjhGVXBkhXkKu4FuV6zqp1oH0GN8e8y_cwElkhG0jJ0JvgG4gDkdEe2x1Gd6joTNVQYg0ftWkQMJQSQPFlPziYxqCnlO8R49OnkyNSvHDyg5s&state=ccb565ca9257323b6ad1b06adb1b8a12f07785dbc7c093de" for 127.0.0.1 at 2016-12-27 13:04:55 +0800
+(facebook) Callback phase initiated.
+(facebook) Authentication failure! invalid_credentials: OAuth2::Error, {"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"ApgJn1Eia/e"}: 
+{"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"ApgJn1Eia\/e"}}
+
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"ApgJn1Eia/e"}: 
+{"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"ApgJn1Eia\/e"}}):
+  oauth2 (1.2.0) lib/oauth2/client.rb:113:in `request'
+  oauth2 (1.2.0) lib/oauth2/client.rb:138:in `get_token'
+  oauth2 (1.2.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
+  omniauth-oauth2 (1.4.0) lib/omniauth/strategies/oauth2.rb:89:in `build_access_token'
+  omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:110:in `build_access_token'
+  omniauth-oauth2 (1.4.0) lib/omniauth/strategies/oauth2.rb:73:in `callback_phase'
+  omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:67:in `block in callback_phase'
+  omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:131:in `with_authorization_code!'
+  omniauth-facebook (4.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.3.1) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.3.1) lib/omniauth/builder.rb:63:in `call'
+  rack (1.6.5) lib/rack/etag.rb:24:in `call'
+  rack (1.6.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.5) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /home/nextacademy/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/nextacademy/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/nextacademy/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (42.2ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (21.8ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (18.4ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (203.8ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (5.3ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (267.6ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (4.1ms)
+  Rendered /home/nextacademy/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (403.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-12-27 13:30:42 +0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_anonymous_user.html.erb (0.9ms)
+Completed 200 OK in 787ms (Views: 785.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-12-27 13:35:32 +0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (25.5ms)
+  Rendered layouts/_anonymous_user.html.erb (0.7ms)
+Completed 200 OK in 412ms (Views: 334.7ms | ActiveRecord: 5.5ms)

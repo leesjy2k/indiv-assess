@@ -18,8 +18,8 @@ class ItemsController < ApplicationController
   end
 
   def create
-    item = CreateItem.new(item_params, current_user, tag_names).call
-    if item.valid?
+    @item = CreateItem.new(item_params, current_user, tag_names).call
+    if @item.valid?
       redirect_to items_path
     else
       @presenter = NewItemPresenter.new(item)
@@ -28,8 +28,15 @@ class ItemsController < ApplicationController
   end
 
   def show
-    item = Item.find(params[:id])
+    @item = Item.find(params[:id])
     @presenter = ItemPresenter.new(item)
+  end
+
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+    flash[:notice] = "Successfully deleted item."
+    redirect_to items_path
   end
 
   private
